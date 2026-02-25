@@ -691,6 +691,36 @@ em {
   background: rgba(196, 30, 58, 0.1);
 }
 
+/* ─── PHOTO BLOCKS ─── */
+.photo-block {
+  margin: 2.5rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  position: relative;
+}
+
+.photo-block__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.05);
+  transition: filter var(--transition-med);
+}
+
+.photo-block:hover .photo-block__img {
+  filter: grayscale(0%) contrast(1.1);
+}
+
+@media (min-width: 768px) {
+  .photo-block {
+    margin: 3rem 0;
+    border-radius: 8px;
+  }
+}
+
 .card__icon {
   display: block;
   font-size: 1.5rem;
